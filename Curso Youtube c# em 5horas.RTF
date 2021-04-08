@@ -1,334 +1,321 @@
-{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
-{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
-\pard\sa200\sl276\slmult1\f0\fs22\lang22 Exemplo:. \par
-\par
+ Exemplo:. 
+
 Console.WriteLine = o line serve para quebrar linha no console \par
-outor jeito \'e9 usar \\n no final. \par
-\par
-exemplo Console.write("Oi\\n")\par
-\par
-Console.readline(); = ler no console \par
-\par
-para chamar no console, Console.writeLine();\par
-* VARI\'c1VEIS  > \par
-\par
-\fs40 (Vari\'e1veis de tipos) \par
-\fs22\par
- int - 140 \par
- float - 15.5\par
- bool - true ou false \par
- string - "text"\par
- char - caracter - 'a'\par
----Tamb\'e9m da para usar -----\par
-Var = o c# advinha qual tipo de vari\'e1vel \'e9 \par
-\par
-( pouco usada, porque pode confundir e atrapalhar na l\'f3gica do prog) \par
--------------\par
-\par
-\par
-\fs40 *CONSTANTES = (NUNCA MUDA)\par
-\fs22 Exemplo:. const float PI = 3,14f;\par
--------------------------------------\par
-Exemplo:. De como capturar oque o usu\'e1rio digita no console \par
-\par
-            Console.WriteLine("Escreva seu nome: ");\par
-aqui captura  >  string nome = Console.ReadLine();\par
-            Console.Write("Seja bem vindo, ");\par
-  aqui responde usando a vari\'e1vel acima >  Console.Write(nome);\par
-            \par
-            Console.ReadLine();//ler no console e capturar oque o usu\'e1rio faz\par
-\par
------------\par
-\fs40 Opera\'e7\'f5es Aritm\'e9ticas :. exemplo \fs22\par
-\par
-int numeroqualquer = 6 + 6; \par
-Console.WriteLine(numeroqualquer); 12 \par
-\par
-float numeroDiv = 5f/2; //quando for numero quebrado, usar float e junto ao numero letra F \par
-Console.WriteLine(numeroDiv); 2,5 \par
-\par
-C# SEGUE REGRA DE SINAIS = 2 + 2 * 10 =  22 \par
-(PARA SER 40, O CERTO \'c9 (2 + 2) * 10 = 40 \par
-\par
-\par
-( Resto das opera\'e7\'f5es \'e9 igual. ) \par
-\par
- CONDI\'c7\'d5ES: \par
-> MAIOR \par
-< MENOR \par
->= MAIOR OU IGUAL \par
-<= MENOR OU IGUAL        \par
-== SINAL DE IGUALDADE        \par
-!= IGUAL OU DIFERENTE     \par
- -------------\par
-\par
-\fs36 CONDICIONAIS : \par
-\fs22 if // se (TRUE)\par
-\par
-else // se n\'e3o (FALSE)  \par
-\par
- \par
-            if (17 >= 18)\par
-            \{\par
-                Console.WriteLine("Verdade");\par
-\par
-            \}\par
-            else\par
-            \{\par
-                Console.WriteLine("Falso");\par
-            \}\par
-\par
-\par
-\par
-var idade = 18;\par
-\par
-            if ( idade  >= 18)\par
-            \{\par
-                Console.WriteLine("Pode fazer a carteira de Motorista");\par
-\par
-            \}\par
-            else\par
-            \{\par
-                Console.WriteLine("Ainda n\'e3o pode fazer a carteira de Motorista");\par
-\par
-            \}\par
-\par
-\par
-\par
-\fs36 *OPER\'c1DORES L\'d3GICOS \par
-\fs22\par
-\fs28 && ( E OU AND ) || ( OU / OR ) \par
-\fs22\par
-exemplo \par
-&& ->  TRUE && FALSE = FALSE ( 0 && 0 = 0 / 1 && 0 = 0 / 1 && 1 = 1 ) \par
-       FALSE && TRUE = FALSE  ( S\'d3 \'c9 VERDADEIRO QUANDO OS DOIS S\'c3O VERDADEIROS ) \par
-       TRUE && TRUE = TRUE       \par
-\par
-J\'c1 O || \'c9 O CONTR\'c1RIO DE "&&", O || S\'d3 PRECISA DE UM DELES VERDADEIROS ( 1 ) QUE ELE SE TORNA TRUE \par
-\par
-exemplo \par
-\par
-||    TRUE || TRUE = TRUE ( 0 || 0 = 0 / 0 || 1 = 1 / 1 || 0 =  1 ) \par
-      FALSE || TRUE = TRUE \par
-      FALSE || FALSE = FALSE\par
-\par
-\fs28 TRABALHANDO COM OPERADORES L\'d3GICOS NA PR\'c1TICA : \par
-\fs22\par
-            //o readline captura um texto.\par
-            //mas eu quero que ele capture um numero \par
-            //ent\'e3o eu uso int.parse(console.readline())\par
-            // ai ele converte text em number = parse = converter\par
-\par
-            Console.WriteLine("Digite sua idade: ");\par
-\par
-            int idade = int.Parse(Console.ReadLine());\par
-          \par
-            if (idade >= 0 && idade <= 11)\par
-            \{\par
-                Console.WriteLine("Voc\'ea \'e9 uma crin\'e7a!");\par
-\par
-            \} else if (idade >=12 && idade <= 18)\par
-            \{\par
-                Console.WriteLine("Voc\'ea \'e9 um adolescente!");\par
-\par
-            \} else if (idade >= 19 && idade <= 60)\par
-            \{\par
-                Console.WriteLine("Voc\'ea \'e9 um adulto!");\par
-            \}\par
-            else \par
-            \{\par
-                Console.WriteLine("Voc\'ea \'e9 um idoso! ");\par
-            \}\par
-               \par
-\par
-\par
-            Console.ReadLine();\par
-\par
-\par
-   ---------------------------\par
-\fs36 *FUN\'c7\'d5ES E PARAM\'caTROS \par
-\fs22\par
-namespace TESTES\par
-\{\par
-    class Program\par
-    \{\par
-        static void Main(string[] args)\par
-        \{\par
-            GerarPre\'e7o(60, "Academia");\par
-            GerarPre\'e7o(300, "Cadeira erg\'f4omica");\par
-            Console.ReadLine();\par
-        \}\par
-    \par
-         static void GerarPre\'e7o(int pre\'e7o, string nome  )\par
-        \{\par
-            Console.WriteLine("Nome do produto: "+nome );//concatena\'e7\'e3o\par
-            Console.WriteLine(pre\'e7o);\par
-    \par
-\par
-outro exemplo :. \par
- static void GerarPre\'e7o(int pre\'e7o )\par
-        \{\par
-\par
-            int valorfinal = pre\'e7o + 10;\par
-            Console.WriteLine("Pre\'e7o final com acr\'e9scimo de taxa : " + valorfinal);\par
-        \}\par
-    \par
-        \}\par
-    \par
-    \}\par
-\par
-\par
-\par
-\fs36 *ARRAY = "SUPER VARI\'c1VEL"\par
-// ele so armazena dados do tipo que voce declarar \par
-\fs22\par
-exemplo:.  int[] = numeros inteiros e etc\par
-outro exemplo\par
-\par
-string[] produtos = new string [2] \{ "FIFA", "BIKE" \}\par
-\par
-// [2] \'c9 O TAMANHO QUE O ARRAY SUPORTA, QUANDO COLOCAR UM NUMERO\par
-N\'c3O PODE MAIS MUDAR, SE COLOQUEI 2 STRING, S\'d3 VAI CABER\par
-DUAS STRING. \par
-\par
-exemplo que deu certo; \par
- \par
-string[] produtos = new string[2] \par
-            \{"FIFA",// 0\par
-            \par
-                "GTA V"\};//1\par
-\par
-            Console.WriteLine(produtos[0]);\par
-            \par
-            Console.ReadLine();\par
-\par
-\par
-(se eu quiser dps alterar o valor de um produto, \par
--> produto[0] = "fifa2021"; \par
-\par
-ai quando eu chamar o produto[0], ele vai vim o fifa2021 e n\'e3o s\'f3 fifa ) \par
-\par
-__________________________________________________________\par
-\par
-\fs32 OUTRO TIPO DE ARRAY MAIS SIMPLES \'c9 \par
-\fs22 EXEMPLO: \par
-\par
-\par
-            int[] valores = \{ 40, 55, 66 \};\par
-\par
-\par
-            Console.WriteLine(valores[2]);\par
-\par
-            Console.ReadLine();\par
-         \par
-            \par
-            \par
-pronto. array criada\par
-\par
-\par
-\par
-_________________________\par
-\fs36 ENUM //  \par
-\fs22\par
-class Program\par
-   \par
-    \{\par
-        enum cor \{preto, verde, amarelo, rosa\}\par
-        enum op\'e7ao \{criar = 1, editar , deletar\}\par
-\par
-        static void Main(string[] args)\par
-        \{\par
-\par
-            Console.WriteLine("Seleciona uma das op\'e7\'f5es: ");\par
-            Console.WriteLine("1-criar\\n2-editar\\n3-deletar");\par
-            \par
-            //truque para nao precisar criar um writeline para\par
-            //cada item\par
-\par
-            int index = int.Parse(Console.ReadLine());\par
-            op\'e7ao op\'e7aoselecionada = (op\'e7ao)index;\par
-\par
-            Console.WriteLine(op\'e7aoselecionada);\par
-            Console.ReadLine();\par
-          \par
-\par
-        \}\par
-    \}\par
-\par
-\par
-\par
-\par
-\fs36 * WHILE// ENQUANTO FOR VERDADE, FA\'c7A \par
-\fs22\par
-\par
-\par
-WHILE NADA MAIS \'c9 DO QUE UM LA\'c7O DE REPETI\'c7\'c3O INFINITO\par
-PARA PARAR ELE, UMA DAS FORMAS \'c9 COLOCAR POR EXEMPLO\par
-CONTADOR = CONTADOR + 1; ( DE FORMA SIMPLIFICADA) \par
-QUE DAI ELE PARA DE FAZER LOOPS DEPENDENDO DO NUMERO QUE \par
-VOCE COLOCOU NA VARIAVEL \{ INT CONTADOR < 5 \} \par
-AQUI ELE VAI IR ATE A (5)LINHA \par
-\par
+outror jeito é usar \n no final. 
+
+exemplo Console.write("Oi\n")
+
+Console.readline(); = ler no console 
+
+para chamar no console, Console.writeLine();
+
+*VARIÁVEIS  > 
+
+
+ (VARIÁVEIS DE TIPOS) 
+
+ int - 140 
+ float - 15.5
+ bool - true ou false 
+ string - "text"
+ char - caracter - 'a'
+---Tambem da para usar apenas VAR (generica)
+Var = o c# advinha qual tipo de variáveis
+MAS : 
+
+( pouco usada, porque pode confundir e atrapalhar na lógica do prog) 
+
+
+
+
+ *CONSTANTES = (NUNCA MUDA)
+ 
+Exemplo:. const float PI = 3,14f;
+
+-
+
+Exemplo:. De como capturar oque o usu\'e1rio digita no console 
+
+            Console.WriteLine("Escreva seu nome: ");
+aqui captura  >  string nome = Console.ReadLine();
+            Console.Write("Seja bem vindo, ");
+  aqui responde usando a variável acima >  Console.Write(nome);
+            
+            
+  * OPERAÇÕES ARITMÉTICAS :. exemplo 
+  
+int numeroqualquer = 6 + 6; 
+
+Console.WriteLine(numeroqualquer); /  =  12 
+
+float numeroDiv = 5f/2; 
+//quando for numero quebrado, usar float e junto ao numero letra F 
+
+Console.WriteLine(numeroDiv); 2,5 
+
+
+C# SEGUE REGRA DE SINAIS = 2 + 2 * 10 =  22 
+(PARA SER 40, O CERTO é (2 + 2) * 10 = 40 
+
+
+ CONDIÇÕES 
+ 
+> MAIOR 
+< MENOR 
+>= MAIOR OU IGUAL 
+<= MENOR OU IGUAL       
+== SINAL DE IGUALDADE
+!= IGUAL OU DIFERENTE    
+ -------------
+CONDICIONAIS : 
+
+if // se (TRUE)
+
+else // se não (FALSE)  
+
+            if (17 >= 18)
+            {
+                Console.WriteLine("Verdade");
+
+            }
+            else
+            {
+                Console.WriteLine("Falso");
+            }
+
+           ____________________
+           
+            VAR  idade = 18;
+
+            if ( idade  >= 18)
+            {
+                Console.WriteLine("Pode fazer a carteira de Motorista");
+
+            }
+            else
+            {
+             Console.WriteLine("Ainda n\'e3o pode fazer a carteira de Motorista");
+
+            }
+
+
+
+*OPERADORES LÓGICOS 
+
+ && ( E OU AND )     || ( OU / OR ) 
+
+exemplo 
+&& ->  TRUE && FALSE = FALSE ( 0 && 0 = 0 / 1 && 0 = 0 / 1 && 1 = 1 ) 
+
+       FALSE && TRUE = FALSE  ( SÓ É  VERDADEIRO QUANDO OS DOIS SÃO VERDADEIROS )
+       
+       TRUE && TRUE = TRUE      
+
+JÁ O || É  O CONTRÁRIO DE "&&", O || SÓ PRECISA DE UM DELES VERDADEIROS ( 1 ) QUE ELE SE TORNA TRUE 
+
+exemplo 
+
+||    TRUE || TRUE = TRUE ( 0 || 0 = 0 / 0 || 1 = 1 / 1 || 0 =  1 ) 
+      FALSE || TRUE = TRUE 
+      FALSE || FALSE = FALSE
+
+
+TRABALHANDO COM OPERADORES LÓGICOS NA PRATICA : 
+
+
+            //o readline captura um texto.
+            //mas eu quero que ele capture um numero 
+            //então eu uso int.parse(console.readline())
+            // ai ele converte text em number = parse = converter
+
+            Console.WriteLine("Digite sua idade: ");
+
+            int idade = int.Parse(Console.ReadLine());
+         
+            if (idade >= 0 && idade <= 11)
+            {
+                Console.WriteLine("Você é uma criança");
+                
+            } else if (idade >=12 && idade <= 18)
+            {
+                Console.WriteLine("Voc\'ea \'e9 um adolescente!");
+
+            } else if (idade >= 19 && idade <= 60)
+            {
+                Console.WriteLine("Você é um adolescente");
+            }
+            else 
+            {
+                Console.WriteLine("Você é um idoso ");
+            }
+
+            Console.ReadLine();
+
+   ---------------------------
+*FUNÇÕES E PARAMÊTROS
+
+namespace TESTES
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GerarPreço(60, "Academia");
+            GerarPreço(300, "Cadeira ergonomica");
+            Console.ReadLine();
+        }
+    
+         static void GerarPreço(int preço, string nome  )
+        {
+            Console.WriteLine("Nome do produto: "+nome );//concatenação
+            Console.WriteLine(preço);
+ 
+outro exemplo :. 
+ static void GerarPre\'e7o(int preço )
+        {
+
+            int valorfinal = preço + 10;
+            Console.WriteLine("Preço final com acrescimo de taxa : " + valorfinal);
+        }
+    
+       }
+    }
+
+* ARRAY = "SUPER VARIÁVEL"
+// ele so armazena dados do tipo que voce declarar 
+
+exemplo:.  int[] = numeros inteiros e etc
+
+outro exemplo\
+
+string[] produtos = new string [2] { "FIFA", "BIKE" }
+
+// [2] É O TAMANHO QUE O ARRAY SUPORTA, QUANDO COLOCAR UM NUMERO NAO PODE 
+MAIS MUDAR, SE COLOQUEI { 2 } STRING, SÓ CABE DUAS STRING // "BYTES"
+
+exemplo que deu certo; 
+ 
+string[] produtos = new string[2] 
+            {"FIFA",// 0
+            
+                "GTA V"\};//1
+
+            Console.WriteLine(produtos[0]);
+           
+            Console.ReadLine();
+
+(se eu quiser dps alterar o valor de um produto, -> produto[0] = "fifa2021"; 
+
+ai quando eu chamar o produto[0], ele vai vim o fifa2021 e não só  fifa ) 
+
+__________________________________________________________
+
+* OUTRO TIPO DE ARRAY MAIS SIMPLES É
+
+ EXEMPLO: 
+ 
+                              0    1    2 
+             int[] valores = { 40, 55, 66 };
+                               
+            Console.WriteLine(valores[2]);
+
+            Console.ReadLine();
+        
+pronto. array criada
+
+_________________________
+            ENUM //  
+
+class Program
+  
+    {
+        enum cor {preto, verde, amarelo, rosa}
+        enum opção {criar = 1, editar , deletar}
+
+             static void Main(string[] args)
+        {
+
+            Console.WriteLine("Seleciona uma das opções: ");
+            
+            Console.WriteLine("1-criar\n2-editar\n3-deletar");
+   
+            
+            //truque para nao precisar criar um writeline para
+            //cada item
+
+             int index = int.Parse(Console.ReadLine());
+            opção opçãoSelecionada = (opção)index;
+
+            Console.WriteLine(opçãoSelecionada);
+            Console.ReadLine();
+          
+        }
+    }
+
+      * WHILE// ENQUANTO FOR VERDADE, FAÇA
+
+WHILE NADA MAIS É DO QUE UM LAÇO DE REPETIÇÃO INFINITO,
+PARA QUE ELE POSSA PARAR, UMA DAS FORMAS É .
+
+Exemplo:. 
+contador = contador +1; ( FORMA SIMPLIFICADA) OU CONTADOR++
+AI ELE PARA DE FAZER LOOPS, DEPENDENDO DO NUMERO QUE 
+FOI COLOCADO NA VARIÁVEL 
+
+{INT CONTADOR < 5 } 
+USANDO A FORMA REDUZIDA, ELE PARA NA LINHA 5 
+
 FORMA REDUZIDA DE (CONTADOR = CONTADOR + 1;)\par
-\par
-   ^\par
-   |\par
-\par
-CONTADOR++\par
- ________________________\par
-( ESTRUTURA DE REPETI\'c7\'c3O ) \par
- \par
- class Program\par
-\par
-    \{\par
-        static void Main(string[] args)\par
-        \{\par
-\par
-            int contador = 0;\par
-            while ( contador < 5)\par
-            \{\par
-                Console.WriteLine(contador);\par
-                Console.WriteLine("Rodando while");\par
-                \par
-                 //contador = contador + 1;\par
-                //posso mudar para contador++\par
-               \par
-                  contador++;\par
-            \}\par
-            Console.WriteLine("FIM DA LINHA");\par
-            Console.ReadLine();\par
-\par
-\par
-_____________________________________\par
-\par
-\fs36 * DO WHILE: \par
-\fs22\par
- AO CONTRARIO DE "WHILE", DO WHILE VAI RODAR\par
-NEM QUE SEJA UMA UNICA VEZ, MESMO SENDO FALSE. \par
- \par
-  do  \par
-   \{\par
-    console.writeline("do while");\par
-\par
-\}while ( 100 < 10 ); \par
-\par
-\par
-// o while nunca rodaria isso, porque essa condi\'e7\'e3o \'e9 falsa \par
-// ja o do while, roda uma vez. \par
-\par
- ___________________________________________________\par
-\par
-\par
-\fs36 * FOR ( \'c9 UMA FORMA REDUZIDA DE WHILE) \par
-\fs22\par
-AO INV\'c9S DE FAZER TODO AQUELE C\'d3DIGO DO WHILE, PODEMOS FAZER ASSIM.\par
-\par
-\par
-for(int contador = 0; contador < 10 ; contador ++ ). \par
-\par
-\par
-________________________________________________________\par
-\par
-\par
-}
- 
+
+
+ ________________________
+ 
+( ESTRUTURA DE REPETIÇÃO ) 
+ 
+ class Program
+
+    {
+        static void Main(string[] args)
+        {
+
+            int contador = 0;
+            while ( contador < 5)
+            {
+                Console.WriteLine(contador);
+                Console.WriteLine("Rodando while");
+                
+                 //contador = contador + 1;
+                //posso mudar para contador++
+              
+                  contador++;
+            }
+            Console.WriteLine("FIM DA LINHA");
+            Console.ReadLine();
+_____________________________________
+
+ * DO WHILE: 
+ 
+ AO CONTRARIO DE "WHILE", O DO WHILE VAI RODAR
+NEM QUE SEJA UMA UNICA VEZ, MESMO SENDO FALSE. 
+
+ 
+  do  
+  {
+    console.writeline("do while");
+
+\}while ( 100 < 10 ); 
+
+
+// o while nunca rodaria isso, porque essa condição é falsa
+// ja o do while, roda uma vez. 
+
+ ___________________________________________________
+
+
+     * FOR ( É UMA FORMA REDUZIDA DE WHILE) 
+
+AO INVÉS DE FAZER TODO AQUELE CÓDIGO DO WHILE, PODEMOS FAZER ASSIM.
+
+for(int contador = 0; contador < 10 ; contador ++ ). 
+
+________________________________________________________
