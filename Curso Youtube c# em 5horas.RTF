@@ -330,3 +330,52 @@ double saldo = 14.3568;
             
 __________________________________________________________
 
+
+
+
+            int idadeDejoao = 17;
+            int quantidadeDePessoas = 2;
+                                                                 // se usar && ele tem que vencer as duas, ja o || precisa vencer so uma para ser true 
+             if(idadeDejoao >= 18 || quantidadeDePessoas>= 2 )  // se o resultado vencer uma das > ele fica true, caso contrario. vai para o else 
+            {
+                 Console.WriteLine(" pode entrar");
+            
+              }else
+          
+            {
+                  Console.WriteLine("ele é menor de idade e nao esta acompanhado");
+            }
+
+
+
+
+___________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+  double salario = 5000.0;
+
+            if(salario >= 1900.0 && salario <= 2800.0)// com && ele tem que confirmar duas vezes, se uma tiver errada, ele passa pra proxima 
+                // para ter 7.5 de ir o salario tem que estar entre 1900 e 2800. caso ele nao estiver entre isso, vai para proxima e assim em diante  
+            {
+                Console.WriteLine("o IR e de 7.5%");
+          
+            } else if (salario>= 2800.01 && salario <= 3751.0)  // && = E... ELE PRECISA DE DUAS CONFIRMAÇÕES PARA COMPILAR, CASO CONTRARIO, ELE VAI PARA A PROXIMA 
+            {
+                Console.WriteLine("o IR e de 15%");
+
+            }else if (salario >= 3751.01 && salario <= 4664.0)
+            {
+                Console.WriteLine("o IR é de 22% ");
+            }else
+            {
+                Console.WriteLine("TA GANHANDO BEM PAGA 33 DE IR ");
+            }
+
+            Console.ReadLine();
+
+            
