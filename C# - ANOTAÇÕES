@@ -428,7 +428,61 @@ ________________________________________________________________________________
            REVISAO BREAK E FOR´S (APROFUNDANDO LAÇOS E LAÇOS ANINHADOS COM BREAK) 
            
           
+          
+          
+           - CLASSES-
            
+          COMO CRIAR UMA CLASSE 
+          
+           - public class NomeDaClasse{                     ( se quiser que ela seja publica) 
+           
+           (DEFININDO OS OBJETOS DA CLASS)
+           
+           public string Titular; 
+           public int Conta;
+           public double Saldo;
+           
+           } 
+           
+           
+          - COMO TROCAR O NOME DA CLASSE, ATRIBUINDO OUTRO NOME P/ USAR
+          
+           NomeDaClasse NomeNovoDaClasse = new NomeDaClasse();
+          
+          - COMO MANIPULAR OS DADOS DESSA CLASSES E SEUS OBJETOS - 
+         
+          * MODELO 1 - NO MODELO 1, MANIPULAMOS OS DADOS DENTRO DA CLASSE DO PROG, FICANDO APARENTE JUNTO COM OUTROS COMANDOS
+          
+          NomeNovoDaClasse.titular = "GustavoM";
+          NomeNovoDaClasse.conta = 55334488;
+          NomeNovoDaClasse.saldo = 100.0;
+          
+          Console.WriteLine(NomeDaClasse.titular); 
+          Console.WriteLine(NomeDaClasse.conta);
+          Console.WriteLine(NomeDaClasse.saldo); 
+                   
+                   
+           -
+           
+           
+         *  MODELO 2- CHAMAMOS DE VALORES PADRÕES - ESSE MODELO JA DEIXAMOS NA PROPRIA CRIAÇÃO DA CLASSE OS DADOS 
+           
+           public class NomeDaClasse
+           {
+
+           public string titular = "Joao";
+           public int agencia;
+           public int conta;
+           public double saldo = 100.0;
+
+           }
+           
+            NomeDaClasse NomeDaClasseNova = new NomeDaClasseNova();        
+
+            Console.WriteLine(NomeDaClasseNova.titular);
+            Console.WriteLine(NomeDaClasseNova.saldo);
+            Console.ReadLine();
+
            
            
            
