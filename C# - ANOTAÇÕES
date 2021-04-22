@@ -484,6 +484,75 @@ ________________________________________________________________________________
             Console.ReadLine();
 
            
+           -OPERADOR LÓGICO 
+            
+            && E = AS DUAS OPERAÇÕES PRECISAM SER VERDADEIRA PARA DAR TRUE / =  FALSE && TRUE = FALSE / = TRUE && TRUE = TRUE/
+            
+            
+            || OU = SÓ UMA DAS OPERAÇOES PRECISA SER VERDADEIRA PARA DAR TRUE /  = FALSE || TRUE = TRUE/  = TRUE && FALSE = TRUE / 
+            
+            
+            !  NAO = AQUI INVERTE O RESULTADO, POR EXEMPLO SE FOR !TRUE = ENTÃO VAI SER FALSE/ !TRUE = FALSE / !FALSE = TRUE 
            
            
            
+           - ESTRUTURA CONDICIONAL 
+               
+               SIMPLES:             
+            IF (CONDIÇÃO)
+            {
+            COMANDOS
+            }
+            _____________________
+            
+            COMPOSTA: 
+            
+            IF (CONDIÇÃO) 
+            {
+            COMANDOS 
+            }
+            ELSE
+            {
+            COMANDOS 
+            }
+            _______________________
+            
+            ENCADEAMENTOS: 
+            
+            -IF ( CONDIÇÃO) 
+            {
+            COMANDOS 
+            }
+           
+           -ELSE IF ( CONDIÇÃO) 
+            {
+            COMANDOS 
+            }
+           
+           - ELSE IF (CONDIÇÃO) 
+            {
+            COMANDOS 
+            }
+          
+          - ELSE 
+            {
+            COMANDOS 
+            }
+            
+            
+            -------------------------------------
+            EXEMPLO PARA SABER SE TAL NUMERO É PAR OU IMPAR 
+            
+            IF ( X % 2 == 0 ) // SE O RESTO DA DIVISAO  DO NUMERO X FOR 0, ELE É PAR. (PARA SABER SE O NUMERO É PAR DIVIDE SEMPRE POR 2)  
+            {
+            CONSOLE.WRITELINE("PAR");
+            }
+            
+            
+            
+            --------------------------------------
+            
+            Math.Sqrt(double)  (ALGORITMO PRONTO DE RAIZ QUADRADA) 
+            
+            
+             FAZER = 30 31 e exercicios part1/part2
