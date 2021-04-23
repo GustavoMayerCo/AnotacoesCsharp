@@ -386,6 +386,7 @@ ________________________________________________________________________________
             
             
             
+            
             ____________________________________________________________________________________________________
          
             MUDANDO DE WHILE PARA FOR ->
@@ -556,3 +557,39 @@ ________________________________________________________________________________
             
             
              FAZER = 30 31 e exercicios part1/part2
+             
+             (FIZ PORRA NENHUMA ;) ) 
+             
+             
+             -SENHA COM WHILE- 
+             
+             
+             Console.WriteLine("Digite seu nome: ");
+            string nome = Console.ReadLine();
+
+            Console.WriteLine("Digite a senha:  ");
+            int senha = int.Parse(Console.ReadLine());
+
+            while (senha != 2002)
+            {
+                Console.Write("senha incorreta, digite novamente: ");
+                senha = int.Parse(Console.ReadLine());
+                
+
+            }
+            Console.WriteLine($"Senha correta, seja bem vindo {nome}");
+
+            Console.ReadLine();
+            }
+            
+             
+             
+
+
+
+
+             
+             
+             
+             
+             
