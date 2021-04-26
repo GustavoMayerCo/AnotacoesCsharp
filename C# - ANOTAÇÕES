@@ -584,12 +584,127 @@ ________________________________________________________________________________
             
              
              
+         39.0
+
+ Triangulo x, y; 
+
+            x = new Triangulo();
+            y = new Triangulo();
 
 
+            Console.WriteLine("Digite as medidas do trângulo X: ");
+            x.A= double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.B= double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.C= double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+
+            Console.WriteLine("Digite as medidas do trângulo Y: ");
+            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.B= double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.C= double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double p = (x.A + x.B + x.C) / 2.0;
+            double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+
+            p = (y.A + y.B + y.C) / 2.0;
+            double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C)) ;
+
+            Console.WriteLine("Area do triangulo X; " + areaX.ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("Area do triangulo Y; " + areaY.ToString("F4", CultureInfo.InvariantCulture));
+
+            if (areaX > areaY)
+            {
+                Console.WriteLine("Maior area é X");
+            }else
+            {
+                Console.WriteLine("Maior area é Y");
+            }
+
+            Console.ReadLine();
+
+          CLASSE : 
+ 
+            public double A;
+            public double B;
+            public double C; 
 
              
+             * COMO CALCULAR A MEDIA (( VALOR1 + VALOR2) / 2); 
              
+             
+             
+              Produto p = new Produto();
+
+            Console.WriteLine("Digite os dados do produto: ");
+            Console.Write("Nome: ");
+            p.nome = Console.ReadLine();
+
+            Console.Write("Preço: ");
+            p.preço = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.Write("Quantidade: ");
+            p.Quantidade = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Dados do produto:  " + p);
+
+            Console.WriteLine();
+            Console.Write("Digite a quantidade de produtos para adicionar: ");
+
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+
+            Console.WriteLine("Dados atualizados: " + p);
+
+            Console.WriteLine();
+            Console.Write("Digite a quantidade de produtos para remover: ");
+
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+
+            Console.WriteLine("Dados atualizados: " + p);
+
+
+            Console.ReadLine();
+           
+            
+            CLASSE 
+         
+         class Produto
+    {
+        public string nome;
+        public double preço;
+        public int Quantidade;
+
+        public double ValorTotalEmEstoque()
+        {
+            return preço * Quantidade;
+    
+        }
+
+        public void AdicionarProdutos(int quantidade)
+        {
+            Quantidade += quantidade;
+        }
+
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+
+
+
+        public override string ToString()
+        {
+            return nome
+                + ", $ "
+                + preço.ToString("F2", CultureInfo.InvariantCulture)
+                + " , "
+                + Quantidade
+                + " unidades, Total: $ "
+                + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
+        }
+
+    }
              
              
              
