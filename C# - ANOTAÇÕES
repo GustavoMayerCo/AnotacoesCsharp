@@ -466,7 +466,7 @@ ________________________________________________________________________________
            -
            
            
-         *  MODELO 2- CHAMAMOS DE VALORES PADRÕES - ESSE MODELO JA DEIXAMOS NA PROPRIA CRIAÇÃO DA CLASSE OS DADOS 
+          *  MODELO 2- CHAMAMOS DE VALORES PADRÕES - ESSE MODELO JA DEIXAMOS NA PROPRIA CRIAÇÃO DA CLASSE OS DADOS 
            
            public class NomeDaClasse
            {
@@ -584,9 +584,9 @@ ________________________________________________________________________________
             
              
              
-         39.0
+            39.0
 
- Triangulo x, y; 
+            Triangulo x, y; 
 
             x = new Triangulo();
             y = new Triangulo();
@@ -622,7 +622,7 @@ ________________________________________________________________________________
 
             Console.ReadLine();
 
-          CLASSE : 
+            CLASSE : 
  
             public double A;
             public double B;
@@ -670,7 +670,7 @@ ________________________________________________________________________________
             CLASSE 
          
          class Produto
-    {
+        {
         public string nome;
         public double preço;
         public int Quantidade;
@@ -704,7 +704,10 @@ ________________________________________________________________________________
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
 
-    }
+        }
              
              
-             
+              public double AumentarSalario(double porcentagem)
+        {
+            return SalarioBruto = SalarioBruto + (SalarioBruto * porcentagem / 100.0); // UMA PARTE DE UMA CLASSE/ PORCENTAGEM
+
